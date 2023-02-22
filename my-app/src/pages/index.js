@@ -26,6 +26,7 @@ export default function Home() {
 				<p>This is the stage branch</p>
 				<p>Sup</p>
 				<p>New commit</p>
+				<p>blah</p>
 				{variable === "true" ? <p>It is true</p> : <p>It is false</p>}
 			</main>
 		</>
