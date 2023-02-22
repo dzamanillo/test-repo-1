@@ -25,6 +25,7 @@ export default function Home() {
 				<h1>This is Test-Repo-1</h1>
 				<p>This is the stage branch</p>
 				<p>Sup</p>
+				<p>New commit</p>
 				{variable === "true" ? <p>It is true</p> : <p>It is false</p>}
 			</main>
 		</>
