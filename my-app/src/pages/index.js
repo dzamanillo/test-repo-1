@@ -24,7 +24,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<h1>This is Test-Repo-1</h1>
 				<p>This is the stage branch</p>
-				<p>test</p>
+				<p>test 2</p>
 				{variable === "true" ? <p>It is true</p> : <p>It is false</p>}
 			</main>
 		</>
