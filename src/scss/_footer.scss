@@ -1,0 +1,132 @@
+#footer {
+  background: #163b58;
+  .container_disclosure {
+    padding: 46px 8px 8px;
+
+    p {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+      color: #f5f5f5;
+      // width: 272px;
+      @media (min-width: 992px) {
+        // width: 842px;
+      }
+      @media (min-width: 1440px) {
+        // width: 1233px;
+      }
+    }
+  }
+  .container_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 260px;
+
+    p {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+      color: #f5f5f5;
+      // width: 300px;
+      @media (min-width: 992px) {
+        // width: 842px;
+      }
+      @media (min-width: 1440px) {
+        // width: 1010px;
+      }
+    }
+    .btn_summary {
+      background: #ffffff;
+      border-radius: 60px;
+      color: #163b58;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+
+      width: 300px;
+      padding: 16px 16px;
+      align-self: center;
+
+      @media (min-width: 992px) {
+        width: 322px;
+        padding: 18px 14px;
+      }
+    }
+  }
+  //DESKTOP
+  .copyright_dsk {
+    display: none;
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+  .container_navlinks_social_dsk {
+    display: none;
+    @media (min-width: 992px) {
+      display: flex;
+      border-top: solid 1px #cdd1d4;
+      padding-top: 22px;
+    }
+  }
+  .container_navlinks_dsk {
+    @media (min-width: 992px) {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: #f5f5f5;
+      width: 220px;
+    }
+  }
+  .container_social_icons_dsk {
+    // width: 180px;
+    // width: 52px;
+    .social-icons-dsk {
+      gap: 1em;
+    }
+    .social-icons-dsk > li {
+      list-style-type: none;
+      list-style: none;
+    }
+  }
+
+  //MOBILE
+  .social-icons-mbl {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  .divider_mbl {
+    border-top: solid 1px #cdd1d4;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    .copyright_mbl {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #f5f5f5;
+      display: block;
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}

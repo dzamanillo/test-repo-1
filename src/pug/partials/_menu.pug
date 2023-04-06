@@ -1,0 +1,20 @@
+#menu(class=`w-full z-50 md:fixed md:top-0 bg-gray-200`)
+  nav(data-scroll-header class=`w-full py-4 container mx-auto`)
+    div(class=`relative top-0 flex flex-row px-10 justify-between`)
+
+      a.logo(href=`/`, class=`flex flex row items-center`)
+        img(src="../media/images/logo.svg", width=`48`, height=`48` alt="")
+        .name(class=`text-lg font-semibold whitespace-no-wrap`)
+          | Static Page Boilerplate
+
+      .links(class=`hidden flex-row items-center justify-around
+                    md:flex md:w-full md:ml-12
+                    lg:ml-24
+                    xl:ml-56`)
+        a(href=`#first`)
+          | First
+        a(href=`#second`)
+          | Second
+        a(href=`#third`)
+          | Third
+

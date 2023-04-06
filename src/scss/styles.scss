@@ -1,0 +1,11 @@
+body {
+	font-smooth: always;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	._content {
+		@apply mt-0;
+		@screen md {
+			@apply mt-0;
+		}
+	}
+}

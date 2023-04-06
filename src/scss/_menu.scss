@@ -1,0 +1,22 @@
+#menu {
+	.links {
+		a {
+			@apply text-blue-700 font-semibold inline-block text-xs cursor-pointer;
+			&:hover {
+				@apply text-gray-900;
+			}
+			@screen md {
+				@apply text-base whitespace-no-wrap;
+			}
+			@screen lg {
+				@apply text-lg;
+			}
+		}
+	}
+	&.scrolling {
+		@screen md {
+			@apply elevation-12 bg-indigo-100;
+			transition: all 0.3s linear;
+		}
+	}
+}

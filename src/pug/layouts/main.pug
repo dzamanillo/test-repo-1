@@ -1,0 +1,23 @@
+//- Main Template
+doctype html
+html(lang=`${site.lang || 'en'}`)
+  //- Header Section
+  head
+    block head
+    include ../partials/_seo.pug
+    if site.typekit
+      link(rel="stylesheet", href=`https://use.typekit.net/${site.typekit}.css`)
+    link(rel="icon" type="image/png" href="../media/images/favicon.png")
+    link(rel="stylesheet", href="../scss/main.scss")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css")
+  //- Body Section    
+  body
+    
+    //- Main content
+    ._content(class=`relative min-h-screen w-full md:absolute`)
+      main(class=`mx-auto w-full`)
+        block content
+    //- Scripts section 
+    block scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js")
+    script(src="../js/_site.js")

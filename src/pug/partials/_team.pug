@@ -1,0 +1,43 @@
+-
+ const team = [
+     {
+         "img": "/../media/images/team/team-shawn-patt.png",
+         "name": "Shawn Patt",
+         "role": "Principal",
+         "biofirst": "Shawn is a Certified Private Wealth Advisor® with nearly 20 years of experience, working at RBC Wealth Management, Morgan Stanley & UBS Financial Services. ",
+         "biosecond": "Shawn is also a professor at The Anderson School of Management at UCLA, teaching Personal Finance. Shawn is also an advisor to the Student Investment Fund at UCLA, helping elite students manage a portion of the UCLA foundation."
+     },
+     {
+         "img": "/../media/images/team/team-michael-salam.png",
+         "name": "Michael Salam",
+         "role": "Senior VP, Portfolio Manager",
+         "biofirst": "Michael Salam is a Portfolio Manager and AI Language Specialist of Atala Financial. Before his current role, Michael was the Founder and Managing Partner of PacificFront Capital, where he managed a $25 million diversified portfolio consisting of equities, interest rates, commodities, and currencies.",
+         "biosecond": "Michael was selected as a Top 5 Best Newcomer at the HFM US Hedge Fund Awards. Michael holds a BA in Business Economics from the University of California, Irvine, where he was part of the Campuswide Honors Program."
+     },
+     {
+         "img": "/../media/images/team/team-susan-siegel.png",
+         "name": "Susan Siegel",
+         "role": "Client Service Associate",
+         "biofirst": "Susan is the Client Service Associate for Atala. She is a natural problem-solver with excellent communication skills. Susan's attention to detail and ability to manage multiple tasks simultaneously allows her to provide clients with the highest level of service.",
+         "biosecond": "In her previous career, Susan was a creative director in the fashion industry, specializing in styling with high-end clients. In her spare time, she enjoys styling clients, traveling, cooking, and spending time with her family and friends."
+     }
+
+ ]
+
+section#team(class=`py-12 lg:pb-32`)
+  .container(class=`mx-auto px-10 flex flex-col items-center `)
+   div(class="container_team")
+    h1(class=`uppercase` data-aos="fade-up") Team
+    div(class="container_boxes_team")
+     each team_member in team
+      div(class="container_box_team")
+        div(class="container_frame_img" data-aos="fade-up")
+          div(class="frame_img")
+          div(class="contain_img")
+            img(alt="team")&attributes({'src':team_member.img})
+        div(class="bio_paragraphs" data-aos="fade-up")
+          p(class="name") #{team_member.name}
+          p(class="role") #{team_member.role}
+          p #{team_member.biofirst}
+          br
+          p #{team_member.biosecond}

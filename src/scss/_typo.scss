@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url("../media/fonts/Georgia/Georgia.ttf");
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url("../media/fonts/ProximaNova/ProximaNova-Regular.otf");
+}
+
+$font-georgia: 'Georgia', serif;
+$font-proximanova: 'proxima-nova', sans-serif;
