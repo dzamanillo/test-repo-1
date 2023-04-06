@@ -24,4 +24,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: "cd ~/www/jordanr217.sg-host.com/test-repo-1 && ./scripts/deploy.sh"
+          script: "cd ~/www/jordanr217.sg-host.com/test-repo-1 && ls -la"
