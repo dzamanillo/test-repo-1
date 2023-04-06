@@ -1,23 +1,23 @@
 module.exports = {
 	locals: {
 		site: {
-			lang: 'en',
-			typekit: ''
+			lang: "en",
+			typekit: "",
 		},
 		analytics: {
-			google: '',
-			facebook: ''
+			google: "",
+			facebook: "",
 		},
 		seo: {
-			siteBaseURL: 'http://static.ktcdev.localhost',
-      siteTitle: 'ATALA FINANCIAL',
-      siteAuthor: 'https://kingtide.la',
+			siteBaseURL: "http://static.ktcdev.localhost",
+			siteTitle: "DANZAM",
+			siteAuthor: "https://kingtide.la",
 			siteDescription: `Dedicated to providing the education, tools and guidance needed to solve life’s enduring financial challenges`,
 		},
 		social: {
-			twitter: 'https://twitter.com/',
-			facebook: 'https://facebook.com/',
-			instagram: 'https://instagram.com/'
-		}
-	}
-}
+			twitter: "https://twitter.com/",
+			facebook: "https://facebook.com/",
+			instagram: "https://instagram.com/",
+		},
+	},
+};
