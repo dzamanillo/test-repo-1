@@ -1,0 +1,31 @@
+section#commitment(class=`py-12`)
+  .container(class=`mx-auto px-10 flex flex-col items-center`)
+   div(class="container_text_commitment")
+    h1(data-aos="fade-up") Commitment to Education
+    p(data-aos="fade-up") We live in an ever-changing financial world. Just when we think we understand the game, the rules change. While core principles remain the same, we must adapt as the rules shift. Atala Financial is dedicated to providing the education, tools and guidance needed to solve life’s enduring financial challenges!
+    //- a(id="btn-modal" class=`btn-commit text-white py-2 px-4 uppercase`, data-aos="fade-up") Download tools
+
+
+
+  .main-modal(id="modal-contact" class=`modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex flex-col justify-center items-center animated fadeIn faster`, style='background: rgba(196, 196, 196,.7); ')
+    
+    div(class=`modal-container shadow-lg bg-white mx-auto shadow-lg z-50`)
+      .modal-content(class=`modal-content py-4 text-left px-6`)
+        div(class="close modal-close container-icon z-50")
+         img(src="/../media/images/icon-close.png", alt="icon-close", class=`icon-close `)
+        div(class=`box-logo flex justify-between items-center pb-3`)
+          div(class="container-logo")
+           img(src="/../media/images/logo_blue.svg", alt="logo_atala", class=`logo_modal `)
+          
+        div(class="text-modal .my-5")
+          p
+            | We’re in the process of developing our software. Enter your information to get notified when we release our tools. 
+        
+        div(class="submit-form")
+                div(class="msg")
+                form(action="https://submit-form.com/11MAsr1X", method="post")
+                    input(type="hidden" name="_feedback.dark" value="true")
+                    input(type="text", id="name", name="name", placeholder="Full name", required="")
+                    input(type="email", id="email", name="email", placeholder="Email", required="")
+                    input(type="submit", value="SUBMIT")
+        

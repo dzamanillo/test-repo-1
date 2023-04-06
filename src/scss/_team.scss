@@ -1,0 +1,100 @@
+#team {
+  background: #f5f5f5;
+
+  .container_team {
+    h1 {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 10.5px;
+      color: #0f192b;
+      padding-bottom: 46px;
+      text-transform: uppercase;
+      @media (min-width: 992px) {
+        font-size: 24px;
+        line-height: 24px;
+        padding-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .container_boxes_team {
+    @media (min-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5em;
+    }
+  }
+  .container_box_team {
+    margin-bottom: 70px;
+    @media (min-width: 1024px) {
+      width: 250px;
+    }
+    @media (min-width: 992px) {
+      margin: 0 32px;
+    }
+    @media (min-width: 1440px) {
+      width: 329px;
+      margin: 0 44px;
+    }
+  }
+  .container_frame_img {
+    position: relative;
+    .frame_img {
+      border: 1px solid #f4ba47;
+      display: inline-block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transform: translate(-5%, -5%);
+      width: 100%;
+
+      @media (min-width: 992px) {
+        transform: translate(-8%, -7%);
+      }
+    }
+    img {
+      position: relative;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+  }
+  .bio_paragraphs {
+    margin-top: 36px;
+    @media (min-width: 992px) {
+      // width: 329px;
+    }
+    .name {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+    .role {
+      font-family: $font-proximanova;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #636363;
+      margin-bottom: 15px;
+    }
+    p {
+      font-family: $font-proximanova;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 117%;
+      color: #8a8a8a;
+    }
+  }
+}
