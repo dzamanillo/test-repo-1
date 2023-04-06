@@ -29,6 +29,7 @@ jobs:
           ARGS: "-rlgoDzvc -i"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
           TARGET: "~/www/jordanr217.sg-host.com/test-repo-1"
           SCRIPT_BEFORE: |
             whoami
