@@ -10,7 +10,7 @@ module.exports = {
 		},
 		seo: {
 			siteBaseURL: "http://static.ktcdev.localhost",
-			siteTitle: "Hi Dan Zam",
+			siteTitle: "Develop",
 			siteAuthor: "https://kingtide.la",
 			siteDescription: `Dedicated to providing the education, tools and guidance needed to solve life’s enduring financial challenges`,
 		},
