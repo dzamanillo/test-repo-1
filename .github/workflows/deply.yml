@@ -38,6 +38,6 @@ jobs:
             echo "Deployment completed!"
             echo "Moving to public directory..."
             cd ~/www/jordanr217.sg-host.com
-            rm -rf public_html/*
-            mv ~/www/jordanr217.sg-host.com/test-repo-1/dist/* ~/www/jordanr217.sg-host.com/public_html
+            rm -rf ~/www/jordanr217.sg-host.com/public_html/*
+            cp -R ~/www/jordanr217.sg-host.com/test-repo-1/dist/* ~/www/jordanr217.sg-host.com/public_html
             echo "Files moved to public directory!"
