@@ -36,3 +36,8 @@ jobs:
             cd www/jordanr217.sg-host.com/test-repo-1
             git pull origin main -f
             echo "Deployment completed!"
+            echo "Moving to public directory..."
+            cd ~/www/jordanr217.sg-host.com
+            rm -rf public_html/*
+            mv ~/www/jordanr217.sg-host.com/test-repo-1/dist/* ~/www/jordanr217.sg-host.com/public_html
+            echo "Files moved to public directory!"
