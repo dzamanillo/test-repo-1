@@ -1,77 +1,43 @@
-# Atala README
+# SiteGround Github Action Test Repository
 
-[![node](https://img.shields.io/badge/node-16-green)](https://nodejs.org/en/)
-[![Address](https://img.shields.io/badge/Port-1234-yellow)](http://localhost:1234)
+This repository contains a PoC of how GitHub Actions can automate the deployment to a SiteGround site. This example uses a project that uses Node and Pug templates.
 
-### TL;DR
+## Steps
 
-```bash
-cd /path/to/atala_landing
-code .
+```
 npm install
-npm run dev # To run locally
-npm run build # To build application
+npm run build
+git add .
+git commit -m 'your message'
+git push origin main
 ```
 
----
+## These steps will trigger the following
 
-### Deploying to Dev Environment
+1.  Checkout the repository
+2.  Install dependencies
+3.  Build the application
+4.  SSH into the SiteGround server
+5.  CD to the repository
+6.  Pull from origin main
+7.  Delete the files in the public_html folder
+8.  Copy the contents of the dist folder into the public_html folder
 
-**_URL_**: [atala.ktcdev.com](http://atala.ktcdev.com)
+## Other thoughts and considerations
 
-<aside style="background-color:#ffcccc; padding: 1rem">
-⛔ Please make sure you have the ssh key to access the ktcdev server. It can be found in the Shared Vault in 1Password and is called kt_staff.
+- This naturally also works with a correct git flow of making a pull request to merge develop into main
+- SiteGround uses a dynamic cache that needs to be flushed. Still looking for a way to flush this cache from the server terminal
 
-</aside>
+## Easy Test
 
-1. Update your `.ssh/config` file so that it includes the following
+To test this I have been changing the title of the homepage in the file src/pug/.pugrc.js. You can to this then run the steps outlined above. Changes should be reflected at [this link](http://jordanr217.sg-host.com/).
 
-   ```bash
-   Host ktcdev
-     User ubuntu
-     HostName ktcdev.com
-     IdentityFile ~/pathTo/file.pem # Update this with your path and file name
-   ```
+You can also ssh into the server by adding this block to your .ssh/config file:
 
-2. Add your changes, write a commit message and push changes to `ktcdev`
-
-   ```bash
-   git add .
-   git commit -m "your message"
-   git push ktcdev develop
-   ```
-
-   ***
-
-### Deploying to Prod Environment
-
-**_URL_**: [atalafinancial.com](https://atalafinancial.com/)
-
-1. Run `npm run build` and create a zip of the `dist` folder. Place this somewhere you can easily access such as your desktop.
-2. Login to the King Tide SiteGround account
-   1. Navigate to “Websites” in the navbar
-   2. Click “Site Tools” under “atalafinancial.com”
-3. Upload the `dist.zip` file to the `public_html` directory in the File Manager
-4. Select the `dist.zip` file and extract
-
-   1. Please note you have to select the file in the larger window as shown below
-
-   ![Screen Shot 2023-03-28 at 3.54.01 PM.png](readmeAssets/Screen_Shot_2023-03-28_at_3.54.01_PM.png)
-
-5. Select everything in the newly created `dist/dist` directory and drag and drop it into `public_html`
-6. Select to Overwrite the new files
-7. Delete `dist` folder
-8. Navigate to the Caching menu under Speed
-
-   ![Screen Shot 2023-03-30 at 10.00.43 AM.png](readmeAssets/Screen_Shot_2023-03-30_at_10.00.43_AM.png)
-
-9. Under Dynamic Cache, click the Flush Cache action
-
-   ![Screen Shot 2023-03-30 at 10.03.10 AM.png](readmeAssets/Screen_Shot_2023-03-30_at_10.03.10_AM.png)
-
-10. You should see the changes shortly
-
-<aside style="background-color:#ffffcc; padding: 1rem">
-🚨 For best results please clear the cache on the page and/or use an incognito tab
-
-</aside>
+```
+Host siteground-test
+  User u1146-bu6vbtmugytt
+  HostName gcam1023.siteground.biz
+  Port 18765
+  IdentityFile ~/.ssh/kt_staff
+```
